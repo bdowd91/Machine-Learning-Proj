@@ -30,3 +30,9 @@ class movies(models.Model):
     time_stamp = models.DateTimeField()
 
 
+
+class choices(models.Model):
+    submission_id = models.IntegerField(primary_key=True)
+    movie_1 = models.CharField(max_length=528)
+    movie_2 = models.CharField(max_length=528)
+    movie_3 = models.CharField(max_length=528)
