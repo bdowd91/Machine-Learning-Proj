@@ -32,7 +32,10 @@ class movies(models.Model):
 
 
 class choices(models.Model):
-    submission_id = models.IntegerField(primary_key=True)
+    submission_id = models.AutoField(primary_key=True)
     movie_1 = models.CharField(max_length=528)
     movie_2 = models.CharField(max_length=528)
     movie_3 = models.CharField(max_length=528)
+
+    def __str__(self):
+        return self.movie_1 + ' ' + self.movie_2 + ' ' + self.movie_3

@@ -47,24 +47,43 @@
         </nav> -->
         <!-- <div class="tab-content" id="nav-tabContent"> -->
           <!-- <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"> -->
-            <h5 class="card-title text-center">Enter Three Movies</h5>
+            <form action='' method='POST'>
+              <div class="form-row">
+                {% csrf_token %}
+                {{ form }}
+                <input class="btn btn-success btn-block" type="submit">
+              </div>
+            </form>
+
+            <!-- <div class='form-row'>
+                <div class='form-group col-md-4'>
+                    <input class='form-control' type='text' name='movie_1' placeholder='Enter title of movie one' />
+                </div>
+                <div class='form-group col-md-4'>
+                    <input class='form-control' type='text' name='movie_1' placeholder='Enter title of movie two' />
+                </div>
+                <div class='form-group col-md-4'>
+                    <input class='form-control' type='text' name='movie_1' placeholder='Enter title of movie three' />
+                </div>
+            </div> -->
+
+            <!-- <h5 class="card-title text-center">Enter Three Movies</h5>
+                <div class="form-row">
+                <div class="form-group col-md-4">
+                <input class="form-control" placeholder="Movie Title 1"type="text"> 
+                </div>
+                <div class="form-group col-md-4">
+                <input class="form-control" placeholder="Movie Title 2" type="text">
+                </div>
+                <div class="form-group col-md-4">
+                <input class="form-control" placeholder="Movie Title 3" type="text">
+                </div>
+            </div>
+
             <div class="form-row">
-            <div class="form-group col-md-4">
-              <input class="form-control" placeholder="Movie Title 1"type="text"> 
-            </div>
-            <div class="form-group col-md-4">
-              <input class="form-control" placeholder="Movie Title 2" type="text">
-            </div>
-            <div class="form-group col-md-4">
-              <input class="form-control" placeholder="Movie Title 3" type="text">
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group col-md-6"> <button type="submit" class="btn btn-success btn-block">Recommend</button></div>
-            <div class="form-group col-md-6"> <button type="submit" class="btn btn-danger btn-block">Reset</button></div>
-          </div>
-
+                <div class="form-group col-md-6"> <button type="submit" class="btn btn-success btn-block">Recommend</button></div>
+                <div class="form-group col-md-6"> <button type="submit" class="btn btn-danger btn-block">Reset</button></div>
+            </div> -->
         <!-- </div> -->
           <!-- <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab"> -->
             <!-- <h5 class="card-title text-center">Enter Movie Keyword</h5>

@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'group3_ml_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'group-3-ml-db',
+        'NAME': 'g3-ml-db',
         'USER': 'postgres',
         'PASSWORD': '123456',
         'HOST': 'localhost',

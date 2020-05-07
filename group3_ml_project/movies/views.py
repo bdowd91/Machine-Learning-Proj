@@ -1,9 +1,16 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .forms import movie_choices_form
 
 # Create your views here.
 def movies(request):
-    sample_dict = {
-        'insert_me':'Hello I am from views.py!'
-    }
-    return render(request,'index.html',context=sample_dict)
+    form = movie_choices_form()
+
+    if request.method == 'POST':
+        print(request.POST)
+        form = movie_choices_form(request.POST)
+        if form.is_valid():
+            form.save()
+
+    context = {'form':form}
+    return render(request,'index.html',context)
