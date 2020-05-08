@@ -12,5 +12,7 @@ def movies(request):
         if form.is_valid():
             form.save()
 
-    context = {'form':form}
+    context = {
+        'form':form,
+    }
     return render(request,'index.html',context)

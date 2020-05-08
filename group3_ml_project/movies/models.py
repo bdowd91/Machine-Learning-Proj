@@ -39,3 +39,10 @@ class choices(models.Model):
 
     def __str__(self):
         return self.movie_1 + ' ' + self.movie_2 + ' ' + self.movie_3
+
+class ml100kmovies(models.Model):
+    movie_id = models.IntegerField()
+    title = models.CharField(max_length=528)
+
+    def __str__(self):
+        return self.movie_id + ' ' + self.title
